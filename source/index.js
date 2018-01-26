@@ -1,4 +1,5 @@
+import jQuery from 'jquery'; 
 
-$(document).ready(function(){
-    $("p").css("color", "red"); 
+jQuery(document).ready(function($){
+    $("p").css("color", "green"); 
 }); 

@@ -1,13 +1,13 @@
 import express from 'express'; 
 import path from 'path'; 
-import open from 'open';
-import bodyParser from 'body-parser';
 import webpack from 'webpack';
 import config from '../webpack.config.dev'; 
 
+/* eslint-disable no-console */
+
+
 const port = 8080; 
 const app = express();
-//app.use(bodyParser.json());
 
 //WEBPACK CONFIG
 const compiler = webpack(config); 
@@ -30,8 +30,8 @@ app.listen(port, function (err) {
     if(err) {
         console.log(err); 
     } else {
-        open('http://localhost:' + port, "chrome"); 
+        //open('http://localhost:' + port, "chrome"); 
         //open('https://www.wp.pl', 'chrome'); 
-        console.log('server is running, PORT' + port);
+        console.log('server is running, PORT ' + port);
     }   
 });

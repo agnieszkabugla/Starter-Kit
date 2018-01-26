@@ -14,7 +14,15 @@
     "test:watch": "npm run test -- --watch",
     "security": "nsp check",
     "share": "lt --port 8080",
-    "lint": "esw webpack.config.* source buildScripts --color"
+    "lint": "esw webpack.config.* source buildScripts --color",
+    "lint:watch": "npm run lint -- --watch",
+    "clean:dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "node_modules/.bin/rimraf ./dist",
+    "build:html": "babel-node buildScripts/buildHtml.js",
+    "prebuild": "npm-run-all clean:dist lint build:html",
+    "build": "babel-node buildScripts/build.js",
+    "postbuild": "babel-node buildScripts/distServer.js",
+    "deploy": "surge ./dist"
   },
   "author": "Agnieszka Bugla",
   "license": "ISC",
@@ -30,6 +38,9 @@
     "chai": "^3.5.0",
     "chalk": "^2.3.0",
     "cheerio": "^0.22.0",
+    "colors": "^1.1.2",
+    "compression": "^1.7.1",
+    "copy-webpack-plugin": "^4.3.1",
     "eslint": "^3.4.0",
     "eslint-plugin-import": "^1.14.0",
     "eslint-watch": "^2.1.14",
@@ -37,7 +48,9 @@
     "mocha": "^3.1.2",
     "node-sass": "^4.7.2",
     "nodemon": "^1.14.11",
+    "npm-run-all": "^4.1.2",
     "nsp": "^3.1.0",
+    "rimraf": "^2.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.21.0",
@@ -46,7 +59,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "open": "0.0.5",
+    "jquery": "^3.3.1",
     "path": "^0.12.7"
   }
 }
