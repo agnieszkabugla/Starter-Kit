@@ -1,0 +1,184 @@
+// Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+// apply a natural box layout model to all elements
+* {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+.clearfix::after {
+  content:"";
+  clear: both;
+  display: table;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.icon-small {
+  @extend .icon;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  right: 5%;
+  top: 4px;
+}
+hr {
+  width: 8vw;
+  border-top: 1px dashed blue;
+  margin: 5px auto 20px;
+}
+
+h1 {
+  line-height: 1.6em;
+  font-size: 1.2em;
+}
+.title {
+  //color: $blue-text;
+  letter-spacing: 5px;
+  text-align: center;
+  font-size: 1.7em;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 2.5em;
+  line-height: 1.2em;
+}
+h3 {
+  line-height: 1.3em;
+  @extend .title;
+  padding-top: 3vh;
+  font-size: 1.1em;
+}
+h4 {
+  //color: $white-opaque;
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
+  line-height: 1.3em;
+}
+p {
+  //color: $blue-text;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.4em;
+  letter-spacing: 0.4px;
+}
+.btn {
+  display: block;
+  margin: 2em auto;
+  text-transform: uppercase;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 1em 1.2em;
+  letter-spacing: 0.2em;
+}
+.link {
+  @extend h3;
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+}
+.btn-link {
+  @extend .btn;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform .3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.circular {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-size: cover;
+  transition: transform .3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+//offsetting an html anchor to adjust for fixed navbar
+@mixin offset($height, $margin) {
+  &::before {
+    display: block;
+    content: " ";
+    height: $height;      /* Give height of your fixed element */
+    margin-top: $margin; /* Give negative margin of your fixed element */
+    visibility: hidden;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes slideInFromTop {
+  0% { transform: translateY(-60%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0 ; }
+  100% { opacity: 1 ; }
+}
+
+
+
+/* RESPONSIVE FONT SIZES*/
+@media all and (min-width: 1480px) {
+  body{
+      font-size: 19px;
+  }
+}
+@media all and (max-width: 1480px) {
+  body{
+      font-size: 18px;
+  }
+}
+@media all and (max-width: 1380px) {
+  body{
+      font-size: 17px;
+  }
+}
+@media all and (max-width: 1180px) {
+  body{
+      font-size: 16px;
+  }
+}
+@media all and (max-width: 1080px) {
+  body{
+      font-size: 15px;
+  }
+  p {
+      font-size: 1em;
+  }
+}
+@media all and (max-width: 980px) {
+  body{
+      font-size: 14px;
+  }
+  p {
+      font-size: 1.1em;
+      line-height: 1.4em;
+  }
+}
+@media all and (max-width: 680px) {
+  body{
+      font-size: 13px;
+  }
+  p {
+      font-size: 1.1em;
+      line-height: 1.4em;
+  }
+}
