@@ -23,56 +23,68 @@ time, mark, audio, video {
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent; }
+  background: transparent;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 nav ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 a {
   margin: 0;
   padding: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent; }
+  background: transparent;
+}
 
 /* change colours to suit your needs */
 ins {
   background-color: #ff9;
   color: #000;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /* change colours to suit your needs */
 mark {
   background-color: #ff9;
   color: #000;
   font-style: italic;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 del {
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 abbr[title], dfn[title] {
   border-bottom: 1px dotted;
-  cursor: help; }
+  cursor: help;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 /* change border colour to suit your needs */
 hr {
@@ -81,37 +93,44 @@ hr {
   border: 0;
   border-top: 1px solid #cccccc;
   margin: 1em 0;
-  padding: 0; }
+  padding: 0;
+}
 
 input, select {
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 .regularFutura {
   font-weight: normal;
-  letter-spacing: 0.01em; }
+  letter-spacing: 0.01em;
+}
 
 html {
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
+  -ms-text-size-adjust: 100%;
+}
 
 * {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   font-size: 16px;
-  line-height: 1.3em; }
+  line-height: 1.3em;
+}
 
 .clearfix::after {
   content: "";
   clear: both;
-  display: table; }
+  display: table;
+}
 
 .icon, .icon-small {
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; }
+  background-size: cover;
+}
 
 .icon-small {
   width: 20px;
@@ -119,42 +138,50 @@ body {
   display: inline-block;
   position: relative;
   right: 5%;
-  top: 4px; }
+  top: 4px;
+}
 
 hr {
   width: 8vw;
   border-top: 1px dashed blue;
-  margin: 5px auto 20px; }
+  margin: 5px auto 20px;
+}
 
 h1 {
   line-height: 1.6em;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 .title, h3, .link {
   letter-spacing: 5px;
   text-align: center;
   font-size: 1.7em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 h2 {
   font-size: 2.5em;
-  line-height: 1.2em; }
+  line-height: 1.2em;
+}
 
 h3, .link {
   line-height: 1.3em;
   padding-top: 3vh;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+}
 
 h4 {
   font-size: 0.7em;
   letter-spacing: 0.1em;
-  line-height: 1.3em; }
+  line-height: 1.3em;
+}
 
 p {
   text-align: center;
   font-weight: 700;
   line-height: 1.4em;
-  letter-spacing: 0.4px; }
+  letter-spacing: 0.4px;
+}
 
 .btn, .btn-link {
   display: block;
@@ -164,82 +191,138 @@ p {
   color: white;
   border: none;
   padding: 1em 1.2em;
-  letter-spacing: 0.2em; }
+  letter-spacing: 0.2em;
+}
 
 .link {
   display: inline-block;
   margin: 0 auto;
-  width: 100%; }
+  width: 100%;
+}
 
 .btn-link {
   display: inline-block;
   cursor: pointer;
-  transition: transform .3s; }
-  .btn-link:hover {
-    transform: scale(1.1); }
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.btn-link:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 
 .circular {
   margin: auto;
   width: 200px;
   height: 200px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   background-size: cover;
-  transition: transform .3s; }
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /* ANIMATIONS */
+@-webkit-keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 @keyframes slideInFromTop {
   0% {
-    transform: translateY(-60%); }
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
+  }
   100% {
-    transform: translateY(0); } }
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes fadeIn {
   0% {
-    opacity: 0; }
+    opacity: 0;
+  }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 
 /* RESPONSIVE FONT SIZES*/
 @media all and (min-width: 1480px) {
   body {
-    font-size: 19px; } }
+    font-size: 19px;
+  }
+}
 
 @media all and (max-width: 1480px) {
   body {
-    font-size: 18px; } }
+    font-size: 18px;
+  }
+}
 
 @media all and (max-width: 1380px) {
   body {
-    font-size: 17px; } }
+    font-size: 17px;
+  }
+}
 
 @media all and (max-width: 1180px) {
   body {
-    font-size: 16px; } }
+    font-size: 16px;
+  }
+}
 
 @media all and (max-width: 1080px) {
   body {
-    font-size: 15px; }
+    font-size: 15px;
+  }
   p {
-    font-size: 1em; } }
+    font-size: 1em;
+  }
+}
 
 @media all and (max-width: 980px) {
   body {
-    font-size: 14px; }
+    font-size: 14px;
+  }
   p {
     font-size: 1.1em;
-    line-height: 1.4em; } }
+    line-height: 1.4em;
+  }
+}
 
 @media all and (max-width: 680px) {
   body {
-    font-size: 13px; }
+    font-size: 13px;
+  }
   p {
     font-size: 1.1em;
-    line-height: 1.4em; } }
+    line-height: 1.4em;
+  }
+}
 
 /* --------- GRID SYSTEM ----------- */
 /* the columns inside a row are all floating to the left, and are therefore taken out of the flow of
@@ -248,49 +331,63 @@ To prevent this, we will add the style that clears the flow. */
 .row::after {
   content: "";
   clear: both;
-  display: table; }
+  display: table;
+}
 
 [class*="col-"] {
   width: 100%;
   float: left;
-  padding: 0 2%; }
+  padding: 0 2%;
+}
 
 /* 12 columns */
 .col-small-1 {
-  width: 8.33333%; }
+  width: 8.33333%;
+}
 
 .col-small-2 {
-  width: 16.66667%; }
+  width: 16.66667%;
+}
 
 .col-small-3 {
-  width: 25%; }
+  width: 25%;
+}
 
 .col-small-4 {
-  width: 33.33333%; }
+  width: 33.33333%;
+}
 
 .col-small-5 {
-  width: 41.66667%; }
+  width: 41.66667%;
+}
 
 .col-small-6 {
-  width: 50%; }
+  width: 50%;
+}
 
 .col-small-7 {
-  width: 58.33333%; }
+  width: 58.33333%;
+}
 
 .col-small-8 {
-  width: 66.66667%; }
+  width: 66.66667%;
+}
 
 .col-small-9 {
-  width: 75%; }
+  width: 75%;
+}
 
 .col-small-10 {
-  width: 83.33333%; }
+  width: 83.33333%;
+}
 
 .col-small-11 {
-  width: 91.66667%; }
+  width: 91.66667%;
+}
 
 .col-small-12 {
-  width: 100%; }
+  width: 100%;
+}
 
 /* -------------------- STYLING -------------------- */
 /* -------------------- HEADER -------------------- */
@@ -301,64 +398,91 @@ To prevent this, we will add the style that clears the flow. */
   /* --------- GRID SYSTEM ----------- */
   /* 12 columns */
   .col-medium-1 {
-    width: 8.33333%; }
+    width: 8.33333%;
+  }
   .col-medium-2 {
-    width: 16.66667%; }
+    width: 16.66667%;
+  }
   .col-medium-3 {
-    width: 25%; }
+    width: 25%;
+  }
   .col-medium-4 {
-    width: 33.33333%; }
+    width: 33.33333%;
+  }
   .col-medium-5 {
-    width: 41.66667%; }
+    width: 41.66667%;
+  }
   .col-medium-6 {
-    width: 50%; }
+    width: 50%;
+  }
   .col-medium-7 {
-    width: 58.33333%; }
+    width: 58.33333%;
+  }
   .col-medium-8 {
-    width: 66.66667%; }
+    width: 66.66667%;
+  }
   .col-medium-9 {
-    width: 75%; }
+    width: 75%;
+  }
   .col-medium-10 {
-    width: 83.33333%; }
+    width: 83.33333%;
+  }
   .col-medium-11 {
-    width: 91.66667%; }
+    width: 91.66667%;
+  }
   .col-medium-12 {
-    width: 100%; }
+    width: 100%;
+  }
   /* -------------------- STYLING -------------------- */
   /* -------------------- HEADER -------------------- */
   /* -------------------- NAVBAR -------------------- */
   /* -------------------- MAIN -------------------- */
-  /* -------------------- FOOTER -------------------- */ }
+  /* -------------------- FOOTER -------------------- */
+}
 
 @media only screen and (min-width: 1140px) {
   /* --------- GRID SYSTEM ----------- */
   /* 12 columns */
   .col-large-1 {
-    width: 8.33333%; }
+    width: 8.33333%;
+  }
   .col-large-2 {
-    width: 16.66667%; }
+    width: 16.66667%;
+  }
   .col-large-3 {
-    width: 25%; }
+    width: 25%;
+  }
   .col-large-4 {
-    width: 33.33333%; }
+    width: 33.33333%;
+  }
   .col-large-5 {
-    width: 41.66667%; }
+    width: 41.66667%;
+  }
   .col-large-6 {
-    width: 50%; }
+    width: 50%;
+  }
   .col-large-7 {
-    width: 58.33333%; }
+    width: 58.33333%;
+  }
   .col-large-8 {
-    width: 66.66667%; }
+    width: 66.66667%;
+  }
   .col-large-9 {
-    width: 75%; }
+    width: 75%;
+  }
   .col-large-10 {
-    width: 83.33333%; }
+    width: 83.33333%;
+  }
   .col-large-11 {
-    width: 91.66667%; }
+    width: 91.66667%;
+  }
   .col-large-12 {
-    width: 100%; }
+    width: 100%;
+  }
   /* -------------------- STYLING -------------------- */
   /* -------------------- HEADER -------------------- */
   /* -------------------- NAVBAR -------------------- */
   /* -------------------- MAIN -------------------- */
-  /* -------------------- FOOTER -------------------- */ }
+  /* -------------------- FOOTER -------------------- */
+}
+/*# sourceMappingURL=styles.css.map */
