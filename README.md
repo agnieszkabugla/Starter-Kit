@@ -2,7 +2,7 @@
 ## Javascript Development Environment
 What does it include?
 * Development / Build servers
-* Webpack 3.0 module bundler
+* Webpack 4.0 module bundler
 * Babel transpiler
 * ES Lint
 * Editor configuration
@@ -18,10 +18,10 @@ For development, you will only need Node.js installed on your environement. And 
 Node is really easy to install & now includes NPM.
 ```
 $ node --version
-v9.4.0
+v10.13.0
 
 $ npm --version
-5.6.0
+6.4.1
 ```
 
 ## Install the project
