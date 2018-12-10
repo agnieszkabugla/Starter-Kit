@@ -72,7 +72,7 @@ module.exports = {
       hash: true
     }),
     new MiniCssExtractPlugin({
-      filename: 'styles.[contenthash].css',
+      filename: 'styles.css',
     }),
   ]
 };
